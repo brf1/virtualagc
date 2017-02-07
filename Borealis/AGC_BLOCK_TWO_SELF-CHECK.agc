@@ -16,6 +16,7 @@
 ##              2017-01-04 MAS  Fleshed out the rest of the hardware alarm tests. Also
 ##                              pulled back all updates added by the time of Sunburst 120.
 ##                              and put in jumps to Retread instruction checks and back.
+##		2017-01-28 RSB	WTIH -> WITH.
 
 # PROGRAM DESCRIPTION                                                         DATE  14 FEBRUARY 1967
 # PROGRAM NAME - SELF-CHECK                                                   LOG SECTION AGC BLOCK TWO SELF-CHECK
@@ -81,7 +82,7 @@
 # FRESH START
 #      DSKYCHK LIGHTS UP THE DSKY DISPLAY ELEMENTS STARTING WITH THE DIGIT9 IN ALL POSITIONS. EACH DISPLAY LASTS
 # 5 SECONDS
-#      SHOW-BANKSUM STARTING WTIH BANK 0 DISPLAYS IN R1 +- THE BANK SUM (SHOULD EQUAL THE BANK NUMBER), IN R2 THE
+#      SHOW-BANKSUM STARTING WITH BANK 0 DISPLAYS IN R1 +- THE BANK SUM (SHOULD EQUAL THE BANK NUMBER), IN R2 THE
 # BANK NUMBER, AND IN R3 THE BUGGER WORD.
 
 
@@ -1145,10 +1146,10 @@ SOPTION         CA              SKEEP4
 SOPT            CCS             SKEEP6                          
                 TC              SDISPLAY                        
 VNCON           OCTAL           00501                           # USED IN SHOWSUM. DISPLAY 3 REGISTERS.
-# BBCON* doesn't currently work in this case in yaYUL, so the expected result is hardcoded.
+# Banks 40-43 currently can't be coded for in yaYUL BLK2, so the expected result is hardcoded.
                 EBANK=          NEWJOB                          
-LSTBNKCH        BBCON*
-#LSTBNKCH        OCT             66100                           # * CONSTANT, LAST BANK.                
+#LSTBNKCH        BBCON*
+LSTBNKCH        OCT             66100                           # * CONSTANT, LAST BANK.                
 
 # CHANGE TO 31777 IF BANK 23 IS LAST BANK USED
 BNKCHK          CCS             SKEEP1                          # WHEN C(SKEEP6) = -0

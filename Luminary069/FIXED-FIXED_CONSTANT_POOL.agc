@@ -18,6 +18,8 @@
 ## Mod history: 2016-12-13 MAS  Created from Luminary 99.
 ##              2016-12-18 MAS  Updated from comment-proofed Luminary 99 version.
 ##		2017-01-02 RRB	Updated for Luminary 69.
+##		2017-01-28 RSB	Proofed comment text using octopus/prooferComments
+##				but no errors found.
 
 ## Page 1090
 		BLOCK	02
@@ -101,7 +103,7 @@ SUPER101	OCT	120		# BITS FOR SUPERBNK SETTING 101
 # OCT121	OCT	121		SERVICE ROUTINES
 					# (FIRST 8K OF ACM)
 SUPER110	OCT	140		# BITS FOR SUPERBNK SETTING 110.
-					# (LAST BK OF ACM)
+					# (LAST 8K OF ACM)
 1SEC		DEC	100
 # LOW7		OCT	177		INTERPRETER
 # BIT8		OCT	00200

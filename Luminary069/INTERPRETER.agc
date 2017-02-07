@@ -18,6 +18,10 @@
 ## Mod history: 2016-12-13 MAS  Created from Luminary 99.
 ##              2016-12-18 MAS  Updated from comment-proofed Luminary 99 version.
 ##              2017-01-20 MAS  Updated for Luminary 69.
+##		2017-01-28 RSB	Proofed comment text using octopus/prooferComments
+##				and fixed errors found.
+##		2017-02-05 RSB	Back-ported comment corrections 
+##				identified while proofing Artemis 072.
 
 ## Page 997
 # SECTION 1  DISPATCHER
@@ -1128,7 +1132,7 @@ DMPNSUB         TS      DMPNTEMP
                 TC      Q
 
 ## Page 1033
-# MISCELLANEOUS VECTOR OPERATIONS. INCLUDED HERE ARE THE FOLLOWING.
+# MISCELLANEOUS VECTOR OPERATIONS. INCLUDED HERE ARE THE FOLLOWING:
 
 #          1.  DOT                DP VECTOR DOT PRODUCT.
 #          2.  VXV                DP VECTOR CROSS PRODUCT.
@@ -1705,7 +1709,7 @@ VRIGHT2         AD      NEG12
                 EXTEND
                 BZMF    VSSR            # IF SO, BRANCH AND SHIFT IMMEDIATELY.
 
-                AD      NEGONE          # IF NOT, REDUCE MPTEMP BY A TOTAL OF 14.
+                AD      NEGONE          # IF NOT, REDUCE MPTEMP BY A TOTAL OF 14,
                 TS      MPTEMP          # AND DO A SHIFT RIGHT AND ROUND BY 14.
                 CAF     ZERO            # THE ROUND AT THIS STAGE MAY INTRODUCE A
                 TS      L               # ONE BIT ERROR IN A SHIFT RIGHT 15D.
@@ -2503,7 +2507,7 @@ VSQSUB          EXTEND                  # DOTS THE VECTOR IN MPAC WITH ITSELF.
 ## Page 1074
 #          DOUBLE PRECISION SQUARE ROOT ROUTINE. TAKE THE SQUARE ROOT OF THE TRIPLE PRECISION (MPAC +2 USED ONLY
 # IN NORMALIZATION) CONTENTS OF MPAC AND LEAVE THE NORMALIZED RESULT IN MPAC (C(MPAC) GREATER THAN OR EQUAL TO
-# .5). THE RIGHT SHIFT COUNT (TC UNNORMALIZE) IS LEFT IN MPTEMP.
+# .5). THE RIGHT SHIFT COUNT (TO UNNORMALIZE) IS LEFT IN MPTEMP.
 
 
 SQRTSUB         CAF     ZERO            # START BY ZEROING RIGHT SHIFT COUNT.
@@ -2563,7 +2567,7 @@ SMPAC+          AD      -1/2+2          # SEE IF ARGUMENT GREATER THAN OR EQUAL 
                 XCH     SR
                 ADS     MPAC    +1      # GUARANTEED NO OVERFLOW.
 
-ARGHI           CAF     SLOPEHI         # ARGUMENT BETWEEN .25 AND .5, GET A
+ARGHI           CAF     SLOPEHI         # ARGUMENT BETWEEN .25 AND .5. GET A
                 EXTEND                  # LINEAR APPROXIMATION FOR THIS RANGE.
                 MP      MPAC
                 AD      BIASHI          # X0/2 = (MPAC/2)(SLOPEHI) + BIASHI/2.
@@ -2837,7 +2841,7 @@ TCSUBTR         TCF     SUBTR
 #          THE FOLLOWING INSTRUCTIONS ARE AVAILABLE FOR SETTING, MODIFYING, AND BRANCHING ON INDEX REGISTERS:
 
 #          1.  AXT                ADDRESS TO INDEX TRUE.
-#          2.  AXC                ADDRESS TO INDEX COMPLEMENTED.
+#          1.  AXC                ADDRESS TO INDEX COMPLEMENTED.
 #          3.  LXA                LOAD INDEX FROM ERASABLE.
 #          4.  LXC                LOAD INDEX COMPLEMENTED FROM ERASABLE.
 #          5.  SXA                STORE INDEX IN ERASABLE.

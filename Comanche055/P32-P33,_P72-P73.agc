@@ -22,6 +22,9 @@
 ##				GOTOPOOH, and I've changed them back.
 ##		2016-12-11 RSB	Proofed comments with octopus/ProoferComments
 ##				and fixed the errors found.
+##		2017-01-28 RSB	WTIH -> WITH.
+##		2017-02-07 RSB	Comment-text corrections identified while 
+##				proofing Artemis 72.
 ##
 ## This source code has been transcribed or otherwise adapted from digitized
 ## images of a hardcopy from the MIT Museum.  The digitization was performed
@@ -47,7 +50,7 @@
 # MOD BY WHITE.P	DATE 1 JUNE 67
 #
 # PURPOSE
-#	(1)	TO CALCULATE PARAMETERS ASSOCIATED WTIH THE FOLLOWING
+#	(1)	TO CALCULATE PARAMETERS ASSOCIATED WITH THE FOLLOWING
 #		CONCENTRIC FLIGHT PLAN MANEUVERS - THE CO-ELLIPTIC SEQUENCE
 #		INITIATION (CSI) MANEUVER AND THE CONSTANT DELTA ALTITUDE
 #		(CDH) MANEUVER.
@@ -300,7 +303,7 @@ P32/P72F	STORE	T2TOT3
 
 ## Page 655
 # CONSTANT DELTA HEIGHT (CDH) PROGRAMS (P33 AND P73)
-# MOD NO -1			LOC SECTION - P32-P35, P72-P75
+# MOD NO -1			LOG SECTION - P32-P35, P72-P75
 # MOD BY WHITE.P  		DATE  1JUNE67
 #
 # PURPOSE
@@ -398,7 +401,7 @@ P32/P72F	STORE	T2TOT3
 #
 # INPUT
 #
-#	(1)	TTPIO	TIME OF THE TPI MANEUVER - SAVED FROM P32/P72
+#	(1)	TTPI0	TIME OF THE TPI MANEUVER - SAVED FROM P32/P72
 ## Page 657
 #	(2)	ELEV	DESIRED LOS ANGLE AT TPI - SAVED FROM P32/P72
 #	(3)	TCDH	TIME OF THE CDH MANEUVER

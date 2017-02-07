@@ -17,6 +17,10 @@
 ##		2017-01-06 RSB	Page numbers now agree with those on the
 ##				original harcopy, as opposed to the PDF page
 ##				numbers in 1701.pdf.
+##		2017-01-28 RSB	Back-ported some comment fixes I noticed while
+##				proofing Luminary 69.
+##		2017-01-28 RSB	Back-ported some comment fixes I noticed while
+##				proofing Artemis 72.
 
 ## Page 660
 # TRANSFER PHASE INITITIATION (TPI) PROGRAMS (P34 AND P74)
@@ -1360,7 +1364,7 @@ GET.LVC		VLOAD	UNIT		# (PL 6D) R (+29) IN MPAC UNITZE UR
 			0D		# DELTA V (+7) IN 0D
 		MXV	VSL1		# CONVERT FROM INER COOR TO LV COOR (+8)
 			6D		# AND SCALE +7 IN MPAC
-		STORE	DELVLVC		# STORE IN DELVLVC (+7(
+		STORE	DELVLVC		# STORE IN DELVLVC (+7)
 		SET	RVQ		# SET MGLVFLAG TO INDICATE LVC CALC
 			MGLVFLAG	# AND EXIT
 
@@ -1477,6 +1481,8 @@ PERIAPO		STQ	CALL
 			NORMEX
 
 ## Page 698
+# SETRAD
+
 SETRAD		DLOAD	PUSH
 			RPAD
 		SXA,1	INCR,2
@@ -1491,6 +1497,8 @@ SETRAD		DLOAD	PUSH
 SETRADX		DLOAD	RVQ
 
 ## Page 699
+# PRECSET
+
 PRECSET		STQ
 			NORMEX
 		STCALL	TDEC2
@@ -1523,6 +1531,8 @@ PASSIVE		STOVL	RPASS3
 		RVQ
 
 ## Page 700
+# VECSHIFT
+
 VECSHIFT	LXA,2	VSR*
 			RTX2
 			0,2
@@ -1533,6 +1543,8 @@ VECSHIFT	LXA,2	VSR*
 		RVQ
 
 ## Page 701
+# SHIFTR1
+
 SHIFTR1		LXA,2	SL*
 			RTX2
 			0,2

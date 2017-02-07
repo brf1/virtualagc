@@ -18,6 +18,9 @@
 ## Mod history: 2016-12-13 MAS  Created from Luminary 99.
 ##              2016-12-14 MAS  Updated from comment-proofed Luminary 99 version.
 ##              2017-01-21 MAS  Updated for Luminary 69.
+##		2017-01-27 RSB	Proofed comment text using octopus/prooferComments
+##				but no errors found.
+##		2017-01-28 RSB	WTIH -> WITH.
 
 ## Page 403
 # PROGRAM NAME - KEYBOARD AND DISPLAY PROGRAM
@@ -2902,7 +2905,7 @@ SETVAC          CAF     TCFINDVC
                 
 # VBRQWAIT ENTERS REQUEST TO WAITLIST FOR ANY ADDRESS WITH ANY DELAY.
 # IT DOES ENDOFJOB AFTER ENTERING REQUEST.DISPLAY SYST IS RELEASED.
-# IT ASSUMES NOUN 26 HAS BEEN PRELOADED WTIH
+# IT ASSUMES NOUN 26 HAS BEEN PRELOADED WITH
 # COMPONENT 1  DELAY (LOW BITS)
 # COMPONENT 2  TASK ADRES (12 BIT)
 # COMPONENT 3  BBCON
